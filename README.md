@@ -29,7 +29,7 @@ Eugene Ahn
 ## Deployment
 
 
-[Heroku](https://github.com/GustavoTijerino1/social_network_api)
+[Heroku](https://gentle-island-56679.herokuapp.com/)
 
 
 ## License
