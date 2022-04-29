@@ -13,11 +13,11 @@ const initdb = async () =>
   });
 
 export const putDb = async (content) => {
-  const textDB = await openDB('textDB', 1);
+  const db_text = await openDB('db_text', 1);
 
-  const trans = jateDb.transaction('textDB', 'readwrite');
+  const jt_Db = jateDb.transaction('db_text', 'readwrite');
 
-  const stre = tx.objectStore('textDB');
+  const tx_obj = tx.objectStore('db_text');
 
   const request = store.put({ id: 1, value: content });
 
@@ -26,11 +26,11 @@ export const putDb = async (content) => {
 };
 
 export const getDb = async () => {
-  const textDB = await openDB('textDB', 1);
+  const db_text = await openDB('db_text', 1);
 
-  const trans = jateDb.transaction('textDB', 'readonly');
+  const jt_Db = jateDb.transaction('db_text', 'readonly');
 
-  const stre = tx.objectStore('textDB');
+  const tx_obj = tx.objectStore('db_text');
 
   const request = store.get(1);
   const result = await request;
